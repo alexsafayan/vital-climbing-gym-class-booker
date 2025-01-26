@@ -1,5 +1,5 @@
 Login page:
-https://clients.mindbodyonline.com/asp/su1.asp
+https://clients.mindbodyonline.com/classic/ws?studioid=836167
 
 Class page:
 https://clients.mindbodyonline.com/classic/mainclass

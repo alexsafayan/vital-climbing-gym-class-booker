@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "playwright": "^1.49.1"
-  }
+  },
+  "name": "vital-climbing-gym-class-booker",
+  "version": "1.0.0",
+  "description": "Login page: https://clients.mindbodyonline.com/asp/su1.asp",
+  "main": "test.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexsafayan/vital-climbing-gym-class-booker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexsafayan/vital-climbing-gym-class-booker/issues"
+  },
+  "homepage": "https://github.com/alexsafayan/vital-climbing-gym-class-booker#readme",
+  "type": "module"
 }
