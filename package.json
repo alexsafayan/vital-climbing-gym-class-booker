@@ -1,12 +1,13 @@
 {
   "dependencies": {
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
     "playwright": "^1.49.1"
   },
   "name": "vital-climbing-gym-class-booker",
   "version": "1.0.0",
   "description": "Login page: https://clients.mindbodyonline.com/asp/su1.asp",
   "main": "test.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
