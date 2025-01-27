@@ -17,4 +17,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npx playwright install chromium-headless-shell
-    - run: node index.js
+    - name: run script
+      env:
+        EMAIL: ${{ secrets.EMAIL }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+      run: node index.js
