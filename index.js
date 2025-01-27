@@ -23,7 +23,9 @@ async function main() {
     const classes = parseClassSchedule(html);
     const chosenClass = chooseClass(classes);
     console.log("chosen class:", chosenClass);
-
+    if (!chosenClass) {
+        throw new Error("No class found matching the specified criteria");
+    }
     await bookClass(page, chosenClass.id);
   } finally {
     await browser.close();

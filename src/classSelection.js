@@ -8,7 +8,7 @@ import { CONFIG } from './config.js';
 export function chooseClass(classData) {
     const openFitnessClasses = classData
         .filter(c => c.name.includes(CONFIG.classSelection.classFilter))
-        .filter(c => c.open >= 0)
+        .filter(c => c.open > 0)
 
     const sortedMorningOpenFitnessClassesInWilliamsburg = openFitnessClasses
         .filter(c => c.time.hours >= CONFIG.classSelection.timeFilter.start && c.time.hours <= CONFIG.classSelection.timeFilter.end)
