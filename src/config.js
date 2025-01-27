@@ -37,17 +37,17 @@ export const CONFIG = {
   dates: {
     nextWeekDate: new SpecialDate(new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)),
     customDate: new SpecialDate('2025-01-31'),
-    useCustomDate: true,
+    useCustomDate: false,
     get chosenDate() {
       return this.useCustomDate ? this.customDate : this.nextWeekDate;
     }
   },
   classSelection: {
     timeFilter: {
-      start: 9,
-      end: 11
+      start: 7,
+      end: 9
     },
     locationFilter: 'Williamsburg',
-    classFilter: 'CYCLE'
+    classFilter: 'FITNESS'
   }
 }; 
