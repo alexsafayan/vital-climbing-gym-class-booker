@@ -12,7 +12,7 @@ export const CONFIG = {
     password: process.env.PASSWORD
   },
   browserConfig: {
-    headless: false,
+    headless: true, // Playwright fails because GitHub Actions lacks a display server for headed browsers
     context: {
       ...devices['Desktop Chrome']
     }
@@ -37,7 +37,7 @@ export const CONFIG = {
   dates: {
     nextWeekDate: new SpecialDate(new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)),
     customDate: new SpecialDate('2025-01-31'),
-    useCustomDate: false,
+    useCustomDate: true,
     get chosenDate() {
       return this.useCustomDate ? this.customDate : this.nextWeekDate;
     }
@@ -45,9 +45,9 @@ export const CONFIG = {
   classSelection: {
     timeFilter: {
       start: 7,
-      end: 9
+      end: 16
     },
     locationFilter: 'Williamsburg',
-    classFilter: 'FITNESS'
+    classFilter: 'YOGA'
   }
 }; 
