@@ -16,5 +16,5 @@ jobs:
         node-version: 'latest'
         cache: 'npm'
     - run: npm ci
-    - run: npx playwright install
+    - run: npx playwright install chromium-headless-shell
     - run: node index.js
