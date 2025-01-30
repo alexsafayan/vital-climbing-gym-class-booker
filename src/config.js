@@ -45,7 +45,7 @@ export const CONFIG = {
   classSelection: {
     timeFilter: {
       start: 7,
-      end: 8
+      end: 9
     },
     locationFilter: 'Williamsburg',
     classFilter: 'FITNESS'
