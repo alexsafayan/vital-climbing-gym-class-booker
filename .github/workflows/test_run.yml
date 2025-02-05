@@ -3,7 +3,7 @@ name: test run
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 5 * * 1,2,3,4,5,6,7' # 12:00am EST on Mon Tue Wed Thu Fri Sat Sun
+    - cron: '0 5 * * 0-6' # 12:00am EST on Mon Tue Wed Thu Fri Sat Sun
 
 
 jobs:
