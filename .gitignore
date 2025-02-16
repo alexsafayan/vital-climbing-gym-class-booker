@@ -1,5 +1,6 @@
 auth.json
 screenshots/
+*.html
 
 # Node.js dependencies
 node_modules/

@@ -17,8 +17,8 @@ async function main() {
     await setDate(page);
     
     const html = await page.content();
-    fs.writeFileSync('test2.html', html);
-    console.log("HTML content written to test2.html");
+    // fs.writeFileSync('test2.html', html);
+    // console.log("HTML content written to test2.html");
 
     const classes = parseClassSchedule(html);
     const chosenClass = chooseClass(classes);

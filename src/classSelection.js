@@ -6,6 +6,11 @@ import { CONFIG } from './config.js';
  * @returns {Object|null} - First matching class or null if none found
  */
 export function chooseClass(classData) {
+    // In testing mode, just return the first available class
+    if (CONFIG.classSelection.testing) {
+        return classData.find(c => c.open > 0) || null;
+    }
+    
     const openFitnessClasses = classData
         .filter(c => c.name.includes(CONFIG.classSelection.classFilter))
         .filter(c => c.open > 0)

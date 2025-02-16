@@ -11,10 +11,15 @@ export async function bookClass(page, classId) {
     // Click the "Sign Up" button
     await page.click(`input[name="${classId}"]`);
 
-    // Wait for the page to load and click the "Submit Enroll" button
-    await page.waitForSelector(CONFIG.selectors.submitEnrollButton);
+    // Wait for any of the submit buttons to appear
+    const submitButton = await Promise.race(
+        CONFIG.selectors.submitEnrollButtons.map(selector => 
+            page.waitForSelector(selector)
+        )
+    );
+    
     await delay(100,200);
-    await page.click(CONFIG.selectors.submitEnrollButton);
+    await submitButton.click();
 
     // Wait for confirmation text
     await page.waitForSelector(CONFIG.selectors.confirmationText);

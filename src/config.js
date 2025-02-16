@@ -23,8 +23,10 @@ export const CONFIG = {
     loginButton: 'input#btnSu1Login',
     loginSuccess: 'td#top-login-container-td.top-section-table-ends',
     dateInput: 'input#txtDate',
-    // submitEnrollButton: 'input[name="SubmitEnroll2"]', they changed it from this??
-    submitEnrollButton: 'input[name="SubmitEnroll1"]',
+    submitEnrollButtons: [
+      'input[name="SubmitEnroll1"]',
+      'input[name="SubmitEnroll2"]'
+    ],
     confirmationText: 'text="Book another class"'
   },
   screenshots: {
@@ -49,6 +51,7 @@ export const CONFIG = {
       end: 9
     },
     locationFilter: 'Williamsburg',
-    classFilter: 'FITNESS'
+    classFilter: 'FITNESS',
+    testing: false
   }
 }; 
