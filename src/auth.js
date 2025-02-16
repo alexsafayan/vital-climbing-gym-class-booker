@@ -3,13 +3,13 @@ import { CONFIG } from './config.js';
 import { delay } from './utils.js';
 
 export async function setupBrowserContext(browser) {
-  if (fs.existsSync(CONFIG.authFile)) {
-    console.log(`Reusing existing authentication from ${CONFIG.authFile}`);
-    return browser.newContext({
-      ...CONFIG.browserConfig.context,
-      storageState: CONFIG.authFile
-    });
-  }
+  // if (fs.existsSync(CONFIG.authFile)) {
+  //   console.log(`Reusing existing authentication from ${CONFIG.authFile}`);
+  //   return browser.newContext({
+  //     ...CONFIG.browserConfig.context,
+  //     storageState: CONFIG.authFile
+  //   });
+  // }
 
   const context = await browser.newContext(CONFIG.browserConfig.context);
   await performLogin(context);
